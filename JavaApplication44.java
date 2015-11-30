@@ -28,7 +28,7 @@ public class JavaApplication44 {
             
             while (scan.hasNextLine()) {
                 content = scan.nextLine();
-                list.add(content);
+                list.push(content);
                 
             }
             
@@ -47,7 +47,20 @@ public class JavaApplication44 {
             JOptionPane.showMessageDialog(null, "\n Program terminated safely");
         }
         
+        //output data in a message dialog box as a list 
         JOptionPane.showMessageDialog(null, "Linked List Data: " + list);
+        
+        //output data in console and message dialog box popups
+        int i = list.size();
+        System.out.println(i);
+        int count = 0;
+        //for(int count = 0; count < i; count++){ <-----not particularly useful
+        while (count < i) {
+        System.out.println(list.get(count));
+        count++;
+        JOptionPane.showMessageDialog(null, list.get(count-1));
+        }
+        
     }
     
 }
