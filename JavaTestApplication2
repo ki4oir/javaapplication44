@@ -1,0 +1,23 @@
+package javatestapplication2;
+
+import java.awt.Component;
+
+import javax.swing.JFileChooser;
+
+public class JavaTestApplication2 {
+	
+	public static void main(String[] args) {
+		
+		JFileChooser chooser = new JFileChooser("C:\\SchoolWork\\CS230\\Week1");
+		//chooser.setFileView(null);
+				
+		//int returnVal = chooser.showOpenDialog("C:\\SchoolWork\\CS230\\Week1");//showOpenDialog doesn't like String?
+		int returnVal = chooser.showOpenDialog(chooser);
+		if(returnVal == JFileChooser.APPROVE_OPTION) {
+			System.out.println("You chose to open this file " + 
+					chooser.getSelectedFile().getParent());
+			chooser.getSelectedFile().toPath(); //Is this what I need to use here?
+		}
+	}
+
+}
