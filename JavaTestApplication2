@@ -8,10 +8,12 @@ public class JavaTestApplication2 {
 	
 	public static void main(String[] args) {
 		
+		//JFileChooser chooser = new JFileChooser(); //default search for parent folder to begin the search
 		JFileChooser chooser = new JFileChooser("C:\\SchoolWork\\CS230\\Week1");
 		//chooser.setFileView(null);
 				
 		//int returnVal = chooser.showOpenDialog("C:\\SchoolWork\\CS230\\Week1");//showOpenDialog doesn't like String?
+		//int returnVal = chooser.showOpenDialog(null); //this will use the default parent folder to begin the search
 		int returnVal = chooser.showOpenDialog(chooser);
 		if(returnVal == JFileChooser.APPROVE_OPTION) {
 			System.out.println("You chose to open this file " + 
