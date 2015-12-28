@@ -1,11 +1,2 @@
-language: java 
-2 script: mvn -Pitest -DargLine="-Dcom.basho.riak.search=true -Dcom.basho.riak.2i=true" clean verify 
-3 notifications: 
-4   # Email notifications are disabled to not annoy anybody. 
-5   # See http://about.travis-ci.org/docs/user/build-configuration/ to learn more 
-6   # about configuring notification recipients and more. 
-7   webhooks: http://basho-engbot.herokuapp.com/travis?key=a8f477c8cdaabc8118d2a650281ff4a71eff875f 
-8   email: false 
-9 services: 
-10   - riak 
+language: java
 
